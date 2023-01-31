@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, FlatList } from "react-native";
+import { View, Text, StyleSheet, FlatList} from "react-native";
 import useCategories from "../../../../hooks/useCategories";
 import Card from "./card";
 
@@ -8,7 +8,8 @@ function Categories()
 {
     const [title , list] = useCategories();
 
-    return <View style={design.view}>
+    return <>
+    <View style={design.view}>
     <Text style={design.title}>{title}</Text>
     <FlatList
     data={list}
@@ -16,8 +17,8 @@ function Categories()
     renderItem={ ({item: { name, imagem} }) => 
     <Card {...{name, imagem}}/>}
     keyExtractor={item => item.name}/>
-    
     </View>
+    </>
 }
 
 const design = StyleSheet.create({

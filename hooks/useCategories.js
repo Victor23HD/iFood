@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { carriesCategories } from "../src/screens/home/services/LoadData";
+import { carriesCategories } from "../src/screens/categories/services/LoadData";
 
 export default function useCategories()
 {
